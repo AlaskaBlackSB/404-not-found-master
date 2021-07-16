@@ -1,0 +1,97 @@
+:root{
+    --fuentePrincipal: 'Space Mono', monospace;
+    --fuenteTitulo: 'Inconsolata', monospace;;
+    --fuenteFooter: 'Montserrat', sans-serif;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.55%;
+}
+body{
+    font-size: 16px;        /* 1 rem = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Imagenes responsivas */
+img{
+    max-width: 100%;
+}
+
+
+/* Textos */
+
+.titulo{
+    font-family: var(--fuenteTitulo);
+    font-size: 2.4rem;
+    margin: 5rem;
+}
+
+.negrito{
+    font-weight: bold;
+    font-size: 4.8rem;
+}
+
+@media (min-width: 768px){
+    .negrito{
+        font-weight: 6.4rem;
+    }
+}
+
+.mensaje{
+    font-size: 1.8rem;
+}
+
+@media (min-width: 768px){
+    .mensaje{
+        font-weight: 6.4rem;
+    }
+}
+
+.negrito, .mensaje, .boton{
+    font-family: var(--fuentePrincipal)
+}
+
+/* Contenido */
+
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    .contenido{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Boton */
+
+.boton{
+    display: inline-block;
+    margin: 2rem 0;
+    text-decoration: none;
+    padding: 2.4rem 4.3rem;
+    color: white;
+    background-color: #333333;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* Footer */
+
+.footer{
+    font-family: var(--fuenteFooter);
+    color: rgba(189, 189, 189, 1);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.nombre{
+    font-weight: bold;
+}
